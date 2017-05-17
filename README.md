@@ -8,8 +8,8 @@ api  handsometable   highchart  jspdf  html2canvas svg轉換 bootstrap w3css �
 把資源檔案裡的所有檔案 丟入 xampp下面的htdocs 
 其餘檔案放入取名為code的資料夾中
 
-變成 （第一層）xampp->（第二層）htdocs-->code（下載檔案)  (第三層）
-                                    資源檔案拉出的所有檔案（下載檔案中的資源拉出所有資料）（第三層）
+變成 （第一層）xampp->（第二層）htdocs-->code資料夾（下載檔案丟入其中除資源檔案夾丟入)  (第三層）
+                                    資源檔案拉出的所有檔案（下載檔案中的資源檔案夾拉出所有資料直接放入htdocs）（第三層）
 
           
                   
