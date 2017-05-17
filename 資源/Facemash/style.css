@@ -1,0 +1,64 @@
+
+img{
+	height: 160px;
+	width: 160px;
+
+}
+#all{
+	border-style:solid ;
+	border-color: #CC0000;
+	height: 100%;
+}
+
+#header {
+	color: white;
+	background-color: #CC0000;
+	height: 120px;
+}
+
+h1{
+	position: inherit;
+	text-align: center;
+}
+
+#middle{
+	text-align: center;
+	margin-top: 100px;
+}
+#space2{
+	height: 100px;
+}
+
+#pic{
+	text-align:center;
+}
+#space{
+	height: 200px;
+}
+
+.thumb{
+	text-align: center;
+}
+.thumb a{
+	display: block;
+    display: inline-block;
+     width: 160px;
+     height: 160px;
+     margin-left: 3px;
+
+}
+.thumb a.last {
+    width: 160px;
+}
+.thumb a.first {
+    width: 160px;
+}
+.foot{
+	text-align: center;
+	position: relative;
+}
+.foot a{
+	margin: 10px;
+	color: blue;
+	text-decoration: none;
+}

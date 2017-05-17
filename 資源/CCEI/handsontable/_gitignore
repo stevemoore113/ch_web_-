@@ -1,0 +1,10 @@
+.DS_Store
+.grunt
+.idea
+_SpecRunner.html
+cars.sqlite
+dev*.html
+npm-debug.log
+
+!dist/README.md
+node_modules/

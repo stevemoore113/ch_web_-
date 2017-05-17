@@ -1,0 +1,81 @@
+$(document).ready(function() {
+Highcharts.chart('container', {
+chart: {
+polar: true,
+type: 'line'
+},
+title: {
+text: 'Budget vs spending',
+x: -80
+},
+pane: {
+size: '80%'
+},
+xAxis: {
+categories: ['Sales', 'Marketing', 'Development', 'Customer Support',
+'Information Technology', 'Administration'],
+tickmarkPlacement: 'on',
+lineWidth: 0
+},
+yAxis: {
+gridLineInterpolation: 'polygon',
+lineWidth: 0,
+min: 0
+},
+tooltip: {
+shared: true,
+pointFormat: '<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br/>'
+},
+legend: {
+align: 'right',
+verticalAlign: 'top',
+y: 70,
+layout: 'vertical'
+},
+series: [{
+name: 'Allocated Budget',
+data: [43000, 19000, 60000, 35000, 17000, 10000],
+pointPlacement: 'on'
+}, {
+name: 'Actual Spending',
+data: [50000, 39000, 42000, 31000, 26000, 14000],
+pointPlacement: 'on'
+}]
+});
+
+$('#download').click(function() {
+var svgElements = $("#container").find('svg');
+//replace all svgs with a temp canvas
+svgElements.each(function() {
+var canvas, xml;
+// canvg doesn't cope very well with em font sizes so find the calculated size in pixels and replace it in the element.
+$.each($(this).find('[style*=em]'), function(index, el) {
+$(this).css('font-size', getStyle(el, 'font-size'));
+});
+canvas = document.createElement("canvas");
+canvas.className = "screenShotTempCanvas";
+//convert SVG into a XML string
+xml = (new XMLSerializer()).serializeToString(this);
+// Removing the name space as IE throws an error
+xml = xml.replace(/xmlns=\"http:\/\/www\.w3\.org\/2000\/svg\"/, '');
+//draw the SVG onto a canvas
+canvg(canvas, xml);
+$(canvas).insertAfter(this);
+//hide the SVG element
+////this.className = "tempHide";
+$(this).attr('class', 'tempHide');
+$(this).hide();
+});
+html2canvas($("#container"), {
+onrendered: function(canvas) {
+var imgData = canvas.toDataURL(
+'image/png');
+var doc = new jsPDF('p', 'mm');
+doc.addImage(imgData, 'PNG', 10, 10);
+doc.save('sample-file.pdf');
+}
+});
+$("#container").find('.screenShotTempCanvas').remove();
+$("#container").find('.tempHide').show().removeClass('tempHide');
+});
+});
