@@ -1,0 +1,26 @@
+<div class="container_main2" id = "chart2">
+    <div class="row">
+     <div class="col-lg-4">
+      <div class="mainchart" id="sp1" style="min-width: 400px; max-width: 500px; height: 400px; margin: 0 auto"></div>
+      <br>
+     </div>
+    <div class="col-lg-4">
+    <div class="mainchart" id="sp2" style="min-width: 400px; max-width: 500px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <div class="col-lg-4">
+    <div class="mainchart" id="sp3" style="min-width: 400px; max-width: 500px; height: 400px; margin: 0 auto"></div>
+    </div>
+ </div>
+</div>
+
+ <div class="container_main3" id = "chart3">
+    <div class="row">
+     <div class="col-lg-6">
+      <div class="mainchart" id="sp4" style="min-width: 400px; max-width: 500px; height: 400px; margin: 0 auto"></div>
+      <br>
+     </div>
+    <div class="col-lg-6">
+    <div class="mainchart" id="sp5" style="min-width: 400px; max-width: 500px; height: 400px; margin: 0 auto"></div>
+    </div>
+ </div>
+</div>
