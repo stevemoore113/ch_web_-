@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine on
     RewriteBase /
-    RewriteCond $1 !^(index\.php|images|swf|uploads|js|css|assets|robots\.txt|$)
+    RewriteCond $1 !^(index\.php|123|CCEI|ccie|soc|imgs|images|img|swf|uploads|js|css|ykl|assets|fonts|robots\.txt|$)
     RewriteRule ^(.*)$ index.php/$1 [L,QSA]
 </IfModule>
